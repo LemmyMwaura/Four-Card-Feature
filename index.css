@@ -36,7 +36,7 @@ header {
 }
 
 h1{
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 .light{
@@ -48,21 +48,88 @@ h1{
 }
 
 header p{
-  max-width: 80vh;
+  max-width: 60vh;
+  font-weight: 200;
+  font-size: 0.7rem;
 }
 
 .card{
-  margin-top: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container{
+  margin-top: 10rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  /* place-content: center; */
-  place-items: center;
+  gap: 1rem;
+  max-width: 900px;
 }
 
+.card-container{
+  position: relative;
+  background-color: var(--Very-Light-Gray);
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px var(--Grayish-Blue),
+              -1px 1px 5px var(--Grayish-Blue);
+}
 
+.card-container h3{
+  font-size: 0.9rem;
+}
 
+.card-container p{
+  font-size: 0.7rem;
+  font-weight: 200;
+  margin-top: 0.5rem;
+  line-height: 20px;
+}
 
+.card-container img{
+  display: flex;
+  margin-top: 1rem;
+  right: 0rem;
+  align-self: flex-start;
+}
+.card-container::before{
+  position: absolute;
+  content: '';
+  background-color:black;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  width: 100%;
+  height: 5px;
+  top: 0;
+  left: 0;
+}
+
+.supervisor::before{
+  background-color: var(--color-Cyan);
+}
+
+.team-builder{
+  top: -6rem;
+}
+
+.team-builder::before{
+  background-color: var(--color-Red);
+}
+
+.calculator::before{
+  background-color: var(--color-Blue);
+}
+
+.karma{
+  grid-column: 2 / 3;
+  top: -6rem;
+}
+
+.karma::before{
+  background-color: var(--color-Orange);
+}
 
 
 
