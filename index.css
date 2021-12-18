@@ -19,10 +19,6 @@ body{
     --Grayish-Blue: hsl(229, 6%, 66%);
     --Very-Light-Gray: hsl(0, 0%, 98%);
     --font-size: 15px;
-
-    /* 
-- Mobile: 375px
-- Desktop: 1440px */
 }
 
 header {
@@ -32,11 +28,12 @@ header {
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 h1{
     font-size: 1.5rem;
+    color: var(--Very-Dark-Blue);
 }
 
 .light{
@@ -48,9 +45,10 @@ h1{
 }
 
 header p{
-  max-width: 60vh;
+  max-width: 62vh;
   font-weight: 200;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
+  margin-top: 1rem;
 }
 
 .card{
@@ -64,21 +62,23 @@ header p{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  gap: 1rem;
+  gap: 1.5rem;
   max-width: 900px;
 }
 
 .card-container{
   position: relative;
   background-color: var(--Very-Light-Gray);
-  padding: 1rem;
+  padding: 1.5rem;
   border-radius: 5px;
-  box-shadow: 1px 1px 5px var(--Grayish-Blue),
-              -1px 1px 5px var(--Grayish-Blue);
+  box-shadow: 1px 1px 3px var(--Grayish-Blue),
+              -1px 1px 3px var(--Grayish-Blue),
+              0px 10px 15px var(--Grayish-Blue);
 }
 
 .card-container h3{
   font-size: 0.9rem;
+  color: var(--Very-Dark-Blue);
 }
 
 .card-container p{
@@ -88,12 +88,12 @@ header p{
   line-height: 20px;
 }
 
-.card-container img{
+.image{
   display: flex;
-  margin-top: 1rem;
-  right: 0rem;
-  align-self: flex-start;
+  margin-top: 1.2rem;
+  justify-content:flex-end;
 }
+
 .card-container::before{
   position: absolute;
   content: '';
@@ -131,17 +131,34 @@ header p{
   background-color: var(--color-Orange);
 }
 
-
-
-
-
-
-
-
 .attribution {
   font-size: 11px;
   text-align: center;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 700px) {
+
+  header{
+    margin: 0 1rem;
+  }
+
+  .card{
+    margin: 0 1rem;
+  }
+  .container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+  }
+
+  .team-builder{
+    top: 0;
+  }
+
+  .karma{
+    top: 0;
+  }
 }
